@@ -19,7 +19,7 @@ public class HomeController extends Controller {
     public HomeController() {
     }
 
-    @RouteInfo(method = "get", path = "/home")
+    @RouteInfo(method = "get", path = "/")
     public Route renderHome() {
         return (Request request, Response response) -> {
             System.out.println("Render Home");

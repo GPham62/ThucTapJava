@@ -35,7 +35,12 @@ public class RenderMain extends RenderEngine {
         Map<String, Object> attributes = new HashMap<>();
         try {
             attributes.put("static_url", Config.getParamString("config", "static_url", ""));
-            content = RenderEngine.getInstance().render(attributes, "home.ftl");
+            String contenHeader = RenderEngine.getInstance().render(attributes, "header.html");
+            String contenFooter = RenderEngine.getInstance().render(attributes, "footer.html");
+            attributes.put("static_url", Config.getParamString("config", "static_url", ""));
+            attributes.put("HEADER", contenHeader);
+            attributes.put("FOOTER", contenFooter);
+            content = RenderEngine.getInstance().render(attributes, "home.html");
         } catch (Exception ex) {
             ex.printStackTrace();
             log.warn("render renderHome", ex);
