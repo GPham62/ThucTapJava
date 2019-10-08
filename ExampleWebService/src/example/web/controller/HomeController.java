@@ -26,5 +26,11 @@ public class HomeController extends Controller {
             return RenderMain.getInstance().renderHome(request, response);
         };
     }
-   
+    @RouteInfo(method = "get", path = "/search")
+    public Route renderSearch(){
+        return (Request request, Response response) -> {
+            System.out.println("Render Search");
+            return RenderMain.getInstance().renderSearch(request, response);
+        };
+    }
 }

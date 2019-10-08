@@ -47,6 +47,17 @@ public class RenderMain extends RenderEngine {
         }
         return content;
     }
-
     
+    public String renderSearch(Request request, Response response) throws IOException{
+        String content = "";
+        Map<String, Object> attributes = new HashMap<>();
+        try {
+            attributes.put("static_url", Config.getParamString("config", "static_url", ""));
+            content = RenderEngine.getInstance().render(attributes, "searchProduct.html");
+        } catch (Exception ex){
+            ex.printStackTrace();
+            log.warn("render renderSearch", ex);
+        }
+        return content;
+    }
 }

@@ -6,7 +6,9 @@ body {
   width: 100%;
   height: 100%;
 }
+.logo{
 
+}
 #content {
   position: relative;
   height: 50px;
@@ -31,8 +33,8 @@ body {
 
 input {
   box-sizing: border-box;
-  width: 75px;
-  height: 75px;
+  width: 70px;
+  height: 70px;
   border: 4px solid #ffffff;
   border-radius: 50%;
   background: none;
@@ -126,14 +128,14 @@ input {
 .square {
   box-sizing: border-box;
   padding: 0 40px 0 10px;
-  width: 300%;
-  height: 150%;
+  width: 200%;
+  height: 130%;
   border: 4px solid #ffffff;
   border-radius: 0;
   background: none;
   color: #fff;
   font-family: Roboto;
-  font-size: 300%;
+  font-size: 250%;
   font-weight: 400;
   outline: 0;
   -webkit-transition: width 0.4s ease-in-out, border-radius 0.4s ease-in-out,
